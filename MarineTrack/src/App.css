@@ -1,42 +1,139 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(255, 165, 0, 0.8), rgba(255, 140, 0, 0.8)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+.panel-container {
+  width: 90%;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.panel-header {
+  background-color: rgba(214, 214, 214, 0.5);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.panel-header h1 {
+  font-size: 24px;
   text-align: center;
+  font-weight: bold;
+  color: #000;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.icon-placeholder {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border-radius: 50%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.download-icon {
+  background-color: rgba(212, 175, 55, 0.7);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.panel-content {
+  padding: 30px 40px;
 }
 
-.card {
-  padding: 2em;
+.input-row {
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
-.read-the-docs {
-  color: #888;
+.input-label {
+  width: 150px;
+  font-weight: bold;
+}
+
+.input-separator {
+  width: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.input-value {
+  flex: 1;
+  font-weight: 500;
+}
+
+.pdf-icon {
+  width: 60px;
+  height: 60px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.accept-button, .deny-button {
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 150px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.accept-button {
+  background-color: rgba(39, 174, 96, 0.9);
+}
+
+.deny-button {
+  background-color: rgba(231, 76, 60, 0.9);
+}
+
+.accept-button:hover {
+  background-color: rgba(33, 150, 83, 1);
+}
+
+.deny-button:hover {
+  background-color: rgba(192, 57, 43, 1);
 }
